@@ -1,0 +1,24 @@
+@use "../../../../theme/theme" as theme;
+@use "../Button.scss" as *;
+
+.btn-attention {
+    @include button;
+    border-radius: 2em;
+    background: #000;
+    color: #fff;
+    border-radius: 2em;
+    font-weight: 500;
+    font-size: 1em;
+    border: 0;
+
+    &:hover {
+        background: #3b3b3b;
+        cursor: pointer;
+    }
+
+    &[disabled] {
+        background: #3b3b3b;
+        color: #bdbdbd;
+        cursor: not-allowed;
+    }
+}

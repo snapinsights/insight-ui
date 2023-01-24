@@ -1,0 +1,39 @@
+@use "../../../../theme/theme" as theme;
+@use "../Button.scss" as *;
+
+.default {
+    @include button;
+    background: theme.get("button.secondary.hover.background");
+    color: theme.get("body.text.primary");
+    font-weight: 500;
+    font-size: 1em;
+    border: 0;
+
+    &:hover {
+        background: theme.get("button.primary.hover.background");
+        color: theme.get("button.primary.hover.text");
+        cursor: pointer;
+    }
+
+    span {
+        &:first-child {
+            display: inline;
+        }
+
+        &:last-child {
+            display: none;
+        }
+    }
+}
+
+.hasHover {
+    &:hover span {
+        &:first-child {
+            display: none;
+        }
+
+        &:last-child {
+            display: inline;
+        }
+    }
+}

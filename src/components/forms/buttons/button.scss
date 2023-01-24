@@ -1,0 +1,19 @@
+@use "../../../theme/theme" as theme;
+@use "../../../theme/spacing" as spacing;
+
+@mixin button {
+    border-radius: theme.get("button.border--radius");
+    padding: 0.65em spacing.get("sm");
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.btn {
+    @include button;
+}

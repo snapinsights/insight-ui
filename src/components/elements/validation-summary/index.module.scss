@@ -1,0 +1,17 @@
+@use "../../../theme/theme" as theme;
+@use "../../../theme/spacing" as spacing;
+
+#summary {
+    list-style: square;
+    background: theme.get("input.error.background");
+    color: theme.get("input.error.text");
+    margin-bottom: spacing.get("sm");
+    padding: spacing.get("xs") spacing.get("sm");
+    border-radius: theme.get("input.border--radius");
+
+    li {
+        line-height: 1.75rem;
+        margin-left: spacing.get("sm");
+        text-align: left;
+    }
+}

@@ -1,0 +1,9 @@
+@use "../../../../theme/spacing" as spacing;
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: spacing.get("xxl") spacing.get("sm");
+    text-align: center;
+}

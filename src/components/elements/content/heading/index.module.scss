@@ -1,0 +1,13 @@
+@use "../../../../theme/spacing.scss" as spacing;
+
+.heading {
+    text-align: center;
+    color: #000;
+
+    p {
+        display: block;
+        max-width: 45em;
+        margin: spacing.get("sm") auto;
+        font-size: 1.25em;
+    }
+}

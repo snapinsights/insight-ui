@@ -1,0 +1,36 @@
+@use "../../../theme/theme" as theme;
+@use "../../../theme/spacing" as spacing;
+
+.input-text {
+    label {
+        display: block;
+        margin-bottom: spacing.get("xxs");
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        padding: spacing.get("micro") spacing.get("xs");
+        background: theme.get("input.background");
+        border: theme.get("input.border");
+        border-radius: theme.get("input.border--radius");
+
+        input {
+            width: 100%;
+            padding: spacing.get("xs");
+            font-size: 1em;
+            background: transparent;
+            border: 0;
+        }
+
+        button {
+            background: none;
+            border: 0;
+
+            svg {
+                position: relative;
+                color: theme.get("input.text");
+            }
+        }
+    }
+}

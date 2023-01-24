@@ -1,0 +1,67 @@
+@use "../../theme/spacing.scss" as spacing;
+@use "../../theme/theme" as theme;
+
+footer {
+    margin-top: spacing.get("xxl");
+
+    & > div {
+        display: flex;
+    }
+
+    & > div:last-child {
+        display: flex;
+        align-items: center;
+        padding: spacing.get("md") spacing.get("xl");
+
+        span {
+            flex: 1;
+
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+
+    aside {
+        width: 100%;
+        padding: spacing.get("xl");
+        border: theme.get("body.border");
+        border-left: 0;
+
+        &:last-child {
+            border-right: 0;
+        }
+
+        h4 {
+            padding: spacing.get("xs") spacing.get("sm");
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                a {
+                    display: inline-block;
+                    text-decoration: none;
+                    color: #0365ef;
+                    padding: spacing.get("xs") spacing.get("sm");
+                    border-radius: theme.$border-radius;
+
+                    &:hover {
+                        background: #0365ef;
+                        color: #fff;
+                    }
+
+                    &:active {
+                        border: theme.get("body.border");
+                        border-color: #0365ef;
+                    }
+                }
+            }
+        }
+    }
+}

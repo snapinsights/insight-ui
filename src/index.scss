@@ -1,0 +1,30 @@
+@use "./theme/theme" as theme;
+@use "./theme/spacing" as spacing;
+@import "./theme/_normalize";
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: theme.get("body.text.primary");
+  font-size: 16px;
+
+  background: theme.get("body.background");
+  min-height: 100vh;
+}
+
+a {
+    color: #0365ef;
+
+    &:hover {
+        color: #3987f5;
+    }
+}
+
+.input-group {
+    & > div {
+        margin-bottom: spacing.get("md");
+    }
+}

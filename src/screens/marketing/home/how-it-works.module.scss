@@ -1,0 +1,63 @@
+@use "../../../theme/theme" as theme;
+@use "../../../theme/spacing" as spacing;
+
+#page {
+    width: 100%;
+    max-width: 70em;
+    margin: spacing.get("xl") auto 0 auto;
+
+    & > div:first-child {
+        background: transparentize(#ffd943, .4);
+        padding: spacing.get("xl") spacing.get("xxl");
+        border-radius: theme.$border-radius;
+
+        a {
+            color: #fb160e;
+        }
+    }
+
+    ol {
+        list-style: none;
+        width: 100%;
+        max-width: 58em;
+        margin: spacing.get("xl") auto 0 auto;
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+            padding: spacing.get("md") 0;
+
+            h4 {
+                margin: 0 spacing.get("xxs");
+                color: theme.get("body.text.secondary");
+            }
+
+            & > div,
+            & > aside {
+                display: block;
+                width: 100%;
+                max-width: 24em;
+
+                p {
+                    margin-bottom: 0;
+                }
+            }
+
+            aside {
+                display: flex;
+                align-items: flex-end;
+
+                svg {
+                    color: theme.get("body.highlight");
+                }
+            }
+
+            &:nth-child(3) {
+                aside {
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+}

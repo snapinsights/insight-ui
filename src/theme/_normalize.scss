@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+
+    &:focus {
+        outline: 0.075rem dashed theme.get("body.highlight");
+    }
+}
+
+::selection {
+    background: #58cdc9;
+    color: #fff;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2.35rem;
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin: 0 0 spacing.get("xs") 0;
+}
+
+p {
+    font-size: 1.25em;
+    line-height: 1.5em;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    display: inherit;
+    width: 100%;
+}

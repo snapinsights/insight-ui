@@ -1,0 +1,60 @@
+@use "../../theme/spacing.scss" as spacing;
+
+header {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    padding: spacing.get("lg");
+
+    & > div {
+        flex: 1;
+    }
+
+    a {
+        color: #242424;
+
+        &:hover, &:active {
+            color: #000;
+        }
+    }
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    flex: 2;
+    align-self: center;
+    justify-content: center;
+
+    &:last-child {
+        flex: 1;
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+
+        li {
+            a {
+                display: block;
+                padding: 0.65em spacing.get("sm");
+                margin: 0 spacing.get("xs");
+                border-radius: 2em;
+                text-decoration: none;
+
+                &:hover {
+                    background: #ffd943;
+                }
+            }
+        }
+    }
+}
+
+aside {
+    flex: 1;
+
+    nav {
+        justify-content: flex-end;
+    }
+}

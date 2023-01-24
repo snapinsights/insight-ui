@@ -1,0 +1,104 @@
+@use "../../../theme/theme" as theme;
+@use "../../../theme/spacing" as spacing;
+
+#page {
+    position: relative;
+
+    & > div {
+        display: flex;
+        width: 100%;
+        max-width: 70em;
+        margin: spacing.get("xxl") auto;
+        align-items: center;
+
+        & > div {
+            width: 100%;
+        }
+
+        & > div:first-child {
+            flex: 1;
+            background: #a3f2fc;
+            padding: spacing.get("xl") spacing.get("xxl");
+            border-radius: theme.$border-radius;
+
+            a {
+                color: #f22a75;
+            }
+        }
+
+        & > div:last-child {
+            flex: 1;
+            padding: spacing.get("xxl");
+        }
+    }
+
+    ol {
+        list-style: none;
+        margin-left: spacing.get("xl");
+
+        li {
+            &::before{
+                content: "\02192";
+                position: absolute;
+                color: #0365ef;
+                left: spacing.get("xl") * -1;
+                font-size: 2.5em;
+            }
+
+            position: relative;
+
+            h2 {
+                font-weight: 500;
+            }
+
+            &:first-child {
+                margin-bottom: spacing.get("lg");
+            }
+        }
+    }
+}
+
+.abstractLine {
+    position: absolute;
+    border-left: .65em solid #effbf7;
+    border-top: .65em solid #effbf7;
+    bottom: -6em;
+    right: 0;
+    z-index: 1;
+}
+
+#line1 {
+    height: 15em;
+    width: 10em;
+    border-top-left-radius: 6em;
+}
+
+#line2 {
+    height: 16.5em;
+    width: 11.5em;
+    border-top-left-radius: 7em;
+}
+
+#line3 {
+    height: 18em;
+    width: 13em;
+    border-top-left-radius: 8.25em;
+}
+
+#line4 {
+    height: 19.5em;
+    width: 14.5em;
+    border-top-left-radius: 9.5em;
+}
+
+#line5 {
+    height: 21em;
+    width: 16em;
+    border-top-left-radius: 11em;
+}
+
+#line6 {
+    height: 22.5em;
+    width: 17.5em;
+    border-top-left-radius: 12.5em;
+}

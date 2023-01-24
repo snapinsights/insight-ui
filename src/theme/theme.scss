@@ -1,0 +1,78 @@
+@use "./utils" as utils;
+
+$border-radius: 1em;
+$box-shadow: 0.7px 0.7px 2px -8px rgba(0, 0, 0, 0.018), 2.3px 2.3px 6.7px -8px rgba(0, 0, 0, 0.032), 10px 10px 30px -8px rgba(0, 0, 0, 0.06);
+$container-width: 70em;
+
+$theme: (
+    body: (
+        background: #ffffff,
+        // #f5f4f3,
+        text:
+            (
+                primary: #1a1a1a,
+                secondary: #918c87,
+                disabled: red,
+            ),
+        highlight: #ffd943,
+        // #ffa6a9,
+        //#fbccb9,
+        border: 0.075em solid #e3e2dc,
+        "border--color": #e3e2dc,
+        "border--width": 0.075em,
+    ),
+    button: (
+        primary: (
+            background: #ff3911,
+            hover: (
+                background: #ff7a60,
+                //#ffc445,
+                text: #fff,
+            ),
+            text: #fff,
+        ),
+        secondary: (
+            background: #999591,
+            hover: (
+                background: #ddd9d4,
+            ),
+        ),
+        action: (
+            background: #000000,
+            background--hover: #3a3a3a,
+            text: #fff,
+        ),
+        border--radius: 2em,
+    ),
+    input: (
+        background: #fff,
+        border: 0.075em solid #e3e2dc,
+        border--radius: $border-radius,
+        text: #3c3c3c,
+        error: (
+            background: #ff7069,
+            text: #ffefee,
+        ),
+    ),
+    link: (
+        primary: (
+            text: #504b47,
+            hover: #918c87,
+            hover--alt: #f54239,
+        ),
+        secondary: (
+            text: #504b47,
+            hover: #918c87,
+            hover--alt: #f54239,
+        ),
+        action: (
+            text: #504b47,
+            text--hover: #033533,
+            background--hover: #58cdc9,
+        ),
+    ),
+);
+
+@function get($key) {
+    @return utils.map-nested-get($theme, $key);
+}
